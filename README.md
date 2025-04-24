@@ -11,6 +11,7 @@ Built with modern React practices, this project demonstrates API integration, re
 ---
 
 ✨ Key Features
+
 ✅ Movie Search & Pagination
 
 ✅ Detailed Movie Pages (Trailers, Cast, Ratings)
@@ -22,14 +23,3 @@ Built with modern React practices, this project demonstrates API integration, re
 ✅ Protected Routes (Login/Auth)
 
 ✅ Animations (Framer Motion)
-
----
-
-🛠️ Tech Stack
-Category	Technologies Used
-Frontend	React.js, React Router
-Styling	CSS Modules, Flexbox/Grid
-API	TMDB API (Movies/Cast)
-State Mgmt	Context API (Dark Mode)
-Deployment	Netlify/Vercel
-
