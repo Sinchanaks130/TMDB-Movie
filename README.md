@@ -1,1 +1,1 @@
-## Live Demo : tmdb-cine-pulse.netlify.app
+## Live Demo : https://tmdb-cine-pulse.netlify.app/
