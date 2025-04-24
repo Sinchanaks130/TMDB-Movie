@@ -1,0 +1,262 @@
+/* Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1e1e1e;
+}
+
+/* Login Box */
+.login-box {
+  background: #1e1e1e;
+  padding: 2rem;
+  width: 27%;
+  border-radius: 40px 5px 30px 10px;
+  box-shadow: 0 0 18px #00f7ff;
+}
+
+/* Heading */
+h2 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: orange;
+  font-size: 2em;
+  text-decoration: underline;
+  margin-bottom: 0.6em;
+  letter-spacing: 2px;
+}
+
+/* Input Group */
+.input-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 11px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 500;
+  background: whitesmoke;
+  color: black;
+  font-size: 16px;
+}
+
+.password-group {
+  position: relative;
+}
+
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-wrapper input {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.eye-toggle {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+/* Login Button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg, #ff9800, #ff5722);
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  box-shadow: 0px 4px 15px rgba(255, 152, 0, 0.4);
+}
+
+/* Hover Effect: Gradient Shine */
+.login-btn:hover {
+  background: linear-gradient(45deg, #ff5722, #ff9800);
+  box-shadow: 0px 6px 20px rgba(255, 87, 34, 0.6);
+  transform: scale(1.05);
+}
+
+/* Click Effect */
+.login-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 10px rgba(255, 152, 0, 0.3);
+}
+
+/* Shimmering Effect */
+.login-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-45deg);
+  transition: 0.6s;
+}
+
+.login-btn:hover::before {
+  left: 150%;
+}
+
+/* Disabled State */
+.login-btn:disabled {
+  background: #888;
+  color: #ddd;
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Loading Animation (Pulsating) */
+.login-btn.loading {
+  background: #ffa726;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: not-allowed;
+  transform: scale(1);
+  animation: pulse 1.6s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0px 0px 10px rgba(255, 152, 0, 0.4);
+  }
+
+  50% {
+    box-shadow: 0px 0px 20px rgba(255, 152, 0, 0.6);
+  }
+
+  100% {
+    box-shadow: 0px 0px 10px rgba(255, 152, 0, 0.4);
+  }
+}
+
+/* Error Message */
+.error {
+  color: red;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 1rem;
+    /* Add padding for smaller screens */
+  }
+
+  .login-box {
+    padding: 1.5rem;
+    /* Reduce padding for smaller screens */
+    width: 90%;
+    /* Make the login box width responsive */
+  }
+
+  .login-btn {
+    font-size: 14px;
+    /* Reduce font size on smaller screens */
+  }
+
+  .input-group input {
+    font-size: 14px;
+    /* Adjust font size of input */
+  }
+
+  h2 {
+    font-size: 24px;
+    /* Adjust heading size for smaller screens */
+  }
+}
+
+/* For even smaller screens (like mobile) */
+@media (max-width: 480px) and (min-width:300px) {
+  .login-box {
+    padding: 1rem;
+    /* Further reduce padding */
+    width: 95%;
+    /* Ensure it fits within very small screens */
+  }
+
+  .login-btn {
+    font-size: 14px;
+    /* Keep button size small */
+  }
+
+  .input-group input {
+    font-size: 14px;
+    /* Adjust input font size */
+  }
+
+  h2 {
+    font-size: 22px;
+    /* Smaller font for headings */
+  }
+
+  .eye-toggle {
+    font-size: 1.1em;
+    right: 8px;
+  }
+}
+
+.password-group {
+  position: relative;
+}
+
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-wrapper input {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.eye-toggle {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}

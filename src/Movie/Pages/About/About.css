@@ -1,0 +1,246 @@
+/* General Styles */
+.about-container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 30px 60px;
+  margin-top: 4%;
+  margin-bottom: 5%;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.8;
+  text-align: justify;
+  color: black;
+  border-radius: 50px;
+  box-shadow: 0px 10px 60px white;
+  animation: fadeIn 3.3s ease-in-out;
+  position: relative;
+  box-shadow: 0px 1px 27px 11px black;
+  overflow: hidden;
+}
+
+.dark-mode .about-container {
+  background-color: black;
+  box-shadow: 0px 10px 27px 11px white;
+  border-radius: 50px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Background Animation */
+.about-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: -1;
+}
+
+/* Heading Styles */
+.about-container h1 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  color: black;
+  text-align: center;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  position: relative;
+  z-index: 1;
+}
+
+.dark-mode .about-container h1{
+  color: white;
+}
+
+.about-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44%;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b6b, #556270);
+  border-radius: 2px;
+}
+
+/* Light Mode Styles */
+.about-container {
+  background-color: white;
+  /* Ensure white background for light mode */
+  padding: 20px;
+}
+
+.dark-mode .about-container h2 {
+  color: white;
+}
+
+.about-container h2 {
+  font-size: 2.2rem;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  margin-left: 0.3em;
+  color: black;
+  position: relative;
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-11px);
+  }
+}
+
+.about-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6b6b, #556270);
+  /* background-color: #7c1630; */
+  border-radius: 2px;
+  animation: underline 2s ease-in-out infinite;
+}
+
+/* Paragraph Styles */
+.about-container p {
+  font-size: 1.2rem;
+  color: black;
+  animation: fadeInUp 1s ease-in-out;
+  position: relative;
+  z-index: 1;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
+  text-indent: 3em;
+  text-align: justify;
+  padding-left: 1.1em;
+  padding-right: 2em;
+}
+
+.dark-mode .about-container p {
+  color: white;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* List Styles */
+.about-container ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+  margin-bottom: 20px;
+  animation: fadeInUp 1.2s ease-in-out;
+  padding-right: 2em;
+}
+
+.about-container ul li {
+  margin-bottom: 20px;
+  color: black;
+  font-weight: 500;
+  position: relative;
+  padding-left: 30px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode .about-container ul li {
+  color: white;
+}
+
+.about-container ul li::before {
+  content: '🎬';
+  position: relative;
+  left: 0;
+  top: 0;
+  font-size: 1.5rem;
+  color: #ff6b6b;
+  transition: transform 0.3s ease;
+}
+
+.about-container ul li:hover::before {
+  transform: scale(1.2);
+}
+
+/* Strong Text Styles */
+.about-container strong {
+  font-size: 1.1em;
+  color: rgb(153, 13, 13);
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .about-container strong{
+  color: orange;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 40px 20px;
+  }
+
+  .about-container h1 {
+    font-size: 3rem;
+  }
+
+  .about-container h2 {
+    font-size: 2.2rem;
+  }
+
+  .about-container p {
+    font-size: 1.1rem;
+  }
+
+  .about-container ul {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-container h2 {
+    font-size: 2rem;
+  }
+
+  .about-container p {
+    font-size: 1rem;
+  }
+
+  .about-container ul {
+    margin-left: 15px;
+  }
+}
